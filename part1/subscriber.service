@@ -1,0 +1,14 @@
+[Unit]
+Description=Google Pub/Sub Receiver Service
+After=network.target
+
+[Service]
+Type=simple
+User=snutheti
+ExecStart=/home/snutheti/myenv/bin/python3 /home/snutheti/subscriber.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
